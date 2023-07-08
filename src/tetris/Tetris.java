@@ -183,9 +183,8 @@ public class Tetris {
 		return getCell(pos.x, pos.y);
 	}
 
-	public static Cell getCell(int x, int y) { //TODO : 여기 다시 보기
-//log("x : " + x + "y: " + y + null: " + ! (0 <= x && x < wLen && 0 <= y && y < hLen));
-		//System.out.println(x + " / " + y); //TODO : debug
+	public static Cell getCell(int x, int y) {
+		//log("x : " + x + "y: " + y + null: " + ! (0 <= x && x < wLen && 0 <= y && y < hLen));
 		return 0 <= x && x < wLen && 0 <= y && y < hLen ? cells[y][x] : null;
 	}
 
@@ -597,10 +596,10 @@ class HighScore {
 	private static String key = null;
 	static final String leaderBoardPath = "TetrisHighScore.bin"; // TODO: let user choose
 
-	public static void put(String name, int point) {
-//Put object at tail
-		leaderBoard[LENGTH - 1] = new Score(name, point);
-	}
+	/**
+	 * //Put object at tail
+	 * */
+	public static void put(String name, int point) { leaderBoard[LENGTH - 1] = new Score(name, point); }
 
 	public static Score get(int i) {
 		return leaderBoard[i];

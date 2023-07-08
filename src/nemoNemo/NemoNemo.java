@@ -148,7 +148,7 @@ public class NemoNemo {
 		clear();
 
 		String t = "";
-		for (int j = 0; j < row; j++) { // TODO: duplicate.... html tag
+		for (int j = 0; j < row; j++) { // TODO: duplicate codes
 			t = "";
 			int result = 0;
 			for (int i = 0; i < col; i++)
